@@ -4,7 +4,7 @@ name: Release documentation
 on:
   push:
     tags:
-      - '*'
+      - v2.0.0-rc2
 
 jobs:
   build:
