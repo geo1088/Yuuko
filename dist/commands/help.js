@@ -71,13 +71,13 @@ const helpCommand = new Yuuko_1.Command([
             }
             // Find the command we're talking about
             let command = client.commandForName(args.shift());
-            let parentCommands = [];
+            const parentCommands = [];
             // If we have a matching command, get help for it
             if (command) {
                 // If we have more arguments, try to resolve subcommands
                 // Lots of type assertions
                 while (args.length) {
-                    let subcommand = command.subcommandForName(args.shift(), client.caseSensitiveCommands);
+                    const subcommand = command.subcommandForName(args.shift(), client.caseSensitiveCommands);
                     if (!subcommand) {
                         // Rather than fail entirely, if there's a subcommand that
                         // doesn't exist, show help for the valid parent command
